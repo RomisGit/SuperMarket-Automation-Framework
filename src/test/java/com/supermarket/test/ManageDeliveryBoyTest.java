@@ -16,7 +16,7 @@ public class ManageDeliveryBoyTest extends BaseTest{
 		hp.navigateToManageDeliveryBoy();
 		String uniqueUsernameName=UniqueGenerator.getUniqueString("Sample UserName");
 		String actualmessage=mdb.createDeliveryBoy(uniqueUsernameName);
-		Assert.assertEquals(actualmessage, "Delivery Boy Details Created Successfully");
+		Assert.assertEquals(actualmessage, "Delivery Boy Details Created Successfull");
 	}
 	@Test 
 	public void verifyUserCanDeleteDeliveryBoy() throws InterruptedException, IOException {
