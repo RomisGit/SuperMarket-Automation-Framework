@@ -41,6 +41,12 @@ public class PageActions {
 	@FindBy(css = ".alert-success.alert-dismissible")
 	protected WebElement alertMsg;
 	
+	@FindBy(xpath = "//*[@class='alert alert-success alert-dismissible']")
+	protected WebElement alertText;
+	
+	@FindBy(xpath = "(//*[@class='btn btn-sm btn btn-danger btncss'])[1]")
+	protected WebElement deleteButton;
+	
 	
 	public void clickElement(WebElement element) {
 		waitUntilclickable(element);
@@ -68,6 +74,7 @@ public class PageActions {
 	public void setText(WebElement element, String value) {
 		
 		waitUntilVisible(element);
+		element.clear();
 		element.sendKeys(value);
 	}
 	

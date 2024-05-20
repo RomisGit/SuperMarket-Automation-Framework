@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.supermarket.test.ManageNewsPageTest">
+      <class name="com.supermarket.test.ManageSliderTest">
         <methods>
+          <include name="VerifyUserCanEditSlider"/>
           <include name="initialiseDriver"/>
-          <include name="tearDOwn"/>
-          <include name="verifyUserCanDeleteNews"/>
         </methods>
-      </class> <!-- com.supermarket.test.ManageNewsPageTest -->
+      </class> <!-- com.supermarket.test.ManageSliderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

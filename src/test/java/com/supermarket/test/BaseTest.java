@@ -1,21 +1,15 @@
 package com.supermarket.test;
 
-import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
@@ -25,10 +19,11 @@ import com.supermarket.pageObjects.HomePage;
 import com.supermarket.pageObjects.ListExpencePage;
 import com.supermarket.pageObjects.LoginPage;
 import com.supermarket.pageObjects.ManageDeliveryBoy;
+import com.supermarket.pageObjects.ManageLocationPage;
 import com.supermarket.pageObjects.ManageNewsPage;
 import com.supermarket.pageObjects.ManageSettingsPage;
+import com.supermarket.pageObjects.ManageSliderPage;
 
-import Context.Constants;
 import Context.DriverManager;
 
 public class BaseTest {
@@ -86,6 +81,8 @@ public class BaseTest {
 	public ManageSettingsPage msj;
 	public ManageNewsPage msp;
 	public ListExpencePage lep;
+	public ManageLocationPage mlp;
+	public ManageSliderPage msl;
 
 	public void initPages() {
 		lp = new LoginPage(driver);
@@ -95,6 +92,9 @@ public class BaseTest {
 		msj=new ManageSettingsPage(driver);
 		msp=new ManageNewsPage(driver);
 		lep=new ListExpencePage(driver);
+		mlp= new ManageLocationPage(driver);
+		msl=new ManageSliderPage(driver);
+		
 	}
 	@AfterMethod(alwaysRun = true)
 	public void tearDOwn() {

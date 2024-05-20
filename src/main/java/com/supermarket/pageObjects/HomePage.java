@@ -46,6 +46,9 @@ public class HomePage extends PageActions {
 	@FindBy(xpath = "(//*[contains(text(),'Manage Expense')])[2]")
 	WebElement manageExpenceBtn;
 	
+	@FindBy(xpath = "//*[@class='nav-icon fas fa-map-marker']")
+	WebElement manageLocation;
+	
 	public String getbrandName() {
 		return brandName.getText();
 	}
@@ -53,6 +56,11 @@ public class HomePage extends PageActions {
 	@FindBy(xpath = "//*[@class=' nav-link']//*[@class='far fa-circle nav-icon']")
 	WebElement settingsManagemenu;
 	
+	
+	
+	
+	@FindBy(xpath = "//*[@class='nav-icon fas fa-window-restore']")
+	WebElement manageSlider;
 	
 	
 	public void navigateToExpenceCategory(){
@@ -85,5 +93,12 @@ public class HomePage extends PageActions {
 	    clickElement(settingsManagemenu);
 	}
 	
+	public void navigateToManageLocation() {
+		clickElement(manageLocation);
+	}
+	
+	public void navigatetoSlider() {
+		clickElement(manageSlider);
+	}
 
 }

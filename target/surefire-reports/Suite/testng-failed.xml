@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.supermarket.listeners.ReportListener"/>
+  </listeners>
   <test thread-count="5" name="CreateExpenceTest(failed)" verbose="0">
     <classes>
       <class name="com.supermarket.test.ManageExpenceCategoryTest">
@@ -13,17 +16,6 @@
       </class> <!-- com.supermarket.test.ManageExpenceCategoryTest -->
     </classes>
   </test> <!-- CreateExpenceTest(failed) -->
-  <test thread-count="5" name="ManageSettingsTest(failed)" verbose="0">
-    <classes>
-      <class name="com.supermarket.test.ManageSettingsTest">
-        <methods>
-          <include name="verifyUserCanDeleteMenu"/>
-          <include name="initialiseDriver"/>
-          <include name="tearDOwn"/>
-        </methods>
-      </class> <!-- com.supermarket.test.ManageSettingsTest -->
-    </classes>
-  </test> <!-- ManageSettingsTest(failed) -->
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
       <class name="com.supermarket.test.AddExpenceTest">

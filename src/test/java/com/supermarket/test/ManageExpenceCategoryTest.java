@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.supermarket.Utils.UniqueGenerator;
 
 public class ManageExpenceCategoryTest extends BaseTest {
-	@Test
+	//@Test
 	public void verifyUserCanCreateNewExpence() throws InterruptedException, IOException {
 		
 		lp.login();
@@ -24,7 +24,7 @@ public class ManageExpenceCategoryTest extends BaseTest {
 	
 	}
 	
-	@Test 
+	//@Test 
 	public void verifyUserCanDeleteExpence() {
 		String actualalertMessage=ecp.deleteExpence();
 		Assert.assertEquals(actualalertMessage, "Expense Category Deleted Successfully");

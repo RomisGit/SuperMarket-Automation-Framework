@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.supermarket.listeners.ReportListener"></listener>
+	</listeners>
+	
+	
+	  	<test  name="ManageListLocationsTest">
+    <classes>
+                <class name="com.supermarket.test.ManageListLocationsTest"/>
+    </classes>
+  </test>
+	
+	  	<test  name="ManageDeliveryBoyTest">
+    <classes>
+             <class name="com.supermarket.test.ManageDeliveryBoyTest"/>
+    </classes>
+  </test>
+  
+  	  	<test  name="ManageNewsPageTest">
+    <classes>
+            <class name="com.supermarket.test.ManageNewsPageTest"/>
+    </classes>
+  </test>
+  
+  	  	<test  name="ManageSliderTest">
+    <classes>
+          <class name="com.supermarket.test.ManageSliderTest"/>
+    </classes>
+  </test>
+	
+	
+	 	<test  name="LoginTest">
+    <classes>
+          <class name="com.supermarket.test.LoginTest"/>
+    </classes>
+  </test>
+  
+  	
+  
+	
+  <test  name="ManageSettingsTest">
+    <classes>
+      <class name="com.supermarket.test.ManageSettingsTest"/>
+    </classes>
+  </test> 
+</suite> 

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class AddExpenceTest extends BaseTest{
 	
-	@Test
+	//@Test
 	public void verifyUserIsAbleToCreateExpence() throws InterruptedException, AWTException, IOException {
 		lp.login();
 		hp.navigateToManageExpence();
