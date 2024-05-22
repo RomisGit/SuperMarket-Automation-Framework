@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.supermarket.Utils.PageActions;
 
+import Context.Constants;
+
 public class ManageSliderPage extends PageActions{
 
 	public ManageSliderPage(WebDriver driver) {
@@ -34,7 +36,7 @@ public class ManageSliderPage extends PageActions{
     
     public String createSlider() throws AWTException, IOException {
     	clickElement(editSlider);
-    	uploadImage(imageUpload, getScreenShot());
+    	uploadImage(imageUpload,Constants.IMAGEPATH);
     	setText(linkTXT, "www.google.com");
     	clickElement(updateSlider);
     	String alertmessage=alertText.getText();

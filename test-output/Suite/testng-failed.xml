@@ -3,28 +3,27 @@
 <suite thread-count="4" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.supermarket.listeners.ReportListener"/>
+    <listener class-name="com.supermarket.listeners.SuperMarketTransformer"/>
   </listeners>
-  <test thread-count="4" parallel="tests" name="Test(failed)">
+  <test thread-count="4" parallel="tests" name="Test2(failed)">
     <classes>
-      <class name="com.supermarket.test.AddExpenceTest">
+      <class name="com.supermarket.test.ManageSliderTest">
         <methods>
+          <include name="VerifyUserCanEditSlider"/>
           <include name="initialiseDriver"/>
-          <include name="verifyUserIsAbleToCreateExpence"/>
-          <include name="tearDOwn"/>
         </methods>
-      </class> <!-- com.supermarket.test.AddExpenceTest -->
+      </class> <!-- com.supermarket.test.ManageSliderTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-  <test thread-count="4" parallel="tests" name="CreateExpenceTest(failed)">
+  </test> <!-- Test2(failed) -->
+  <test thread-count="4" parallel="tests" name="CreateDeiveryBoyTest(failed)">
     <classes>
-      <class name="com.supermarket.test.ManageExpenceCategoryTest">
+      <class name="com.supermarket.test.ManageDeliveryBoyTest">
         <methods>
+          <include name="verifyUserCanCreateDeliveryBoy"/>
           <include name="initialiseDriver"/>
-          <include name="verifyUserCanDeleteExpence"/>
-          <include name="tearDOwn"/>
-          <include name="verifyUserCanCreateNewExpence"/>
+          <include name="verifyUserCanDeleteDeliveryBoy"/>
         </methods>
-      </class> <!-- com.supermarket.test.ManageExpenceCategoryTest -->
+      </class> <!-- com.supermarket.test.ManageDeliveryBoyTest -->
     </classes>
-  </test> <!-- CreateExpenceTest(failed) -->
+  </test> <!-- CreateDeiveryBoyTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -34,13 +34,17 @@ public class ReportListener extends BaseTest implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		extentTest.get().fail(result.getThrowable());
 		try {
-			extentTest.get().addScreenCaptureFromPath(PageActions.getScreenShot(), result.getMethod().getMethodName());
+			extentTest.get().addScreenCaptureFromPath(PageActions.getScreenShot(result.getMethod().getMethodName()));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		extentTest.get().log(Status.SKIP, "Skipped test case");
+	}
 	@Override
 	public void onFinish(ITestContext context) {
 		extent.flush();

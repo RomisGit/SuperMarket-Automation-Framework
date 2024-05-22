@@ -3,6 +3,7 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="com.supermarket.listeners.ReportListener"></listener>
+		<listener class-name="com.supermarket.listeners.SuperMarketTransformer"></listener>
 	</listeners>
 	
 	

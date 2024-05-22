@@ -3,6 +3,7 @@
 <suite name="Suite" parallel="tests" thread-count="4">
 		<listeners>
 		<listener class-name="com.supermarket.listeners.ReportListener"></listener>
+		<listener class-name="com.supermarket.listeners.SuperMarketTransformer"></listener>
 	</listeners>
 	
 	<test  name="CreateExpenceTest">
@@ -36,10 +37,22 @@
     </classes>
   </test>
   
-  <test  name="Test">
+  <test  name="Test1">
     <classes>
       <class name="com.supermarket.test.AddExpenceTest"/>
     </classes>
   </test> 
   
+    
+  <test  name="Test2">
+    <classes>
+      <class name="com.supermarket.test.ManageSliderTest"/>
+    </classes>
+  </test> 
+  
+   <test  name="Test3">
+    <classes>
+      <class name="com.supermarket.test.ManageListLocationsTest"/>
+    </classes>
+  </test> 
 </suite> 

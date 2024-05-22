@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.supermarket.test.ManageSliderTest">
+      <class name="com.supermarket.test.ManageDeliveryBoyTest">
         <methods>
-          <include name="VerifyUserCanEditSlider"/>
+          <include name="verifyUserCanCreateDeliveryBoy"/>
           <include name="initialiseDriver"/>
         </methods>
-      </class> <!-- com.supermarket.test.ManageSliderTest -->
+      </class> <!-- com.supermarket.test.ManageDeliveryBoyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

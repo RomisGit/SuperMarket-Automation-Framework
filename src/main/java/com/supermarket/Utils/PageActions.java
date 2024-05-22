@@ -132,10 +132,10 @@ public class PageActions {
 	     robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
-	public static String getScreenShot() throws IOException {
+	public static String getScreenShot(String testName) throws IOException {
 		TakesScreenshot screenshot=(TakesScreenshot)DriverManager.getDriver();
 		File srcFile=screenshot.getScreenshotAs(OutputType.FILE);
-		String path=Constants.SCREENSHOTPATH;
+		String path=Constants.WORKINGDIRECTORY+"\\Reports\\"+testName+UniqueGenerator.getCurrentDateTime()+".png";
 		File desFile=new File(path);
 		
 		FileUtils.moveFile(srcFile, desFile);

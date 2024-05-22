@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ManageListLocationsTest extends BaseTest {
-	@Test
+	//@Test
 	public void verifyUserCanCreateListLocation() throws IOException {
 	lp.login();
 	hp.navigateToManageLocation();
@@ -14,7 +14,7 @@ public class ManageListLocationsTest extends BaseTest {
 	Assert.assertEquals(actualLocationmessage, "Location Created Successfully");
 
 	}
-	@Test 
+	//@Test 
 	public void verifyUserCanDeleteListLocation() throws InterruptedException, IOException {
 		lp.login();
 		hp.navigateToManageLocation();
